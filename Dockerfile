@@ -11,6 +11,8 @@ LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
 COPY LICENSE README.md /
 
+RUN /bin/sh -c yarn config set
+
 # Taken from https://github.com/cypress-io/cypress-docker-images/blob/15c5bf875454a289e20587b192c4e4322787956c/base/10/Dockerfile#L3
 # BEGIN
 RUN apt-get update && \
